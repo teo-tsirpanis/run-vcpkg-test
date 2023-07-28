@@ -1,0 +1,9 @@
+on: workflow_dispatch
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        container: quay.io/pypa/manylinux2014_x86_64
+        steps:
+        - name: Setup vcpkg (it does not install any package yet)
+          uses: lukka/run-vcpkg@v11
